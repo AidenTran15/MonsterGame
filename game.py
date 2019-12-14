@@ -6,10 +6,11 @@ while game_running == True:
     player = {'name':'Aiden', 'attack': 10, 'heal': 16, 'health': 100}
     monster = {'name':'Giant', 'attack': 12, 'health': 100}
 
-    print('             Welcome to Monster Game')
+    print('            Welcome to Monster Game')
+    print('---' * 17)
     print('Enter your name')
     player['name'] = input()
-    print('Hello ' + player['name'] + ", let's start game")
+    
 
 
     while new_round == True:
@@ -17,6 +18,9 @@ while game_running == True:
         player_won = False
         monster_won = False
 
+        print('___' * 17 )
+        print('Hello ' + player['name'] + ", let's start game")
+        print('  ')
         print('Please select action')
         print('1> Attack')
         print('2> Heal')
@@ -48,7 +52,7 @@ while game_running == True:
 
         elif player_choice == '4':
             print("""
-            Introduce Monster Game
+            ---Introduce Monster Game---
     You need to kill monster with name Giant
     Press 1 for attack the monster
     Press 2 for heal health yourself
