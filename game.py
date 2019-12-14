@@ -10,7 +10,7 @@ while game_running == True:
     print('---' * 17)
     print('Enter your name')
     player['name'] = input()
-    print(" ")
+    print(" you")
     print('Hello ' + player['name'] + ", let's start game")
 
 
@@ -40,7 +40,7 @@ while game_running == True:
             
 
         elif player_choice == '2':
-            print('Heal player')
+            player['health'] = player['health'] + player['heal']
 
         elif player_choice =='3':
              game_running = False
@@ -69,6 +69,7 @@ while game_running == True:
 
         elif monster_won:
             print('Monster won.')
+            new_round = False
 
 
 
