@@ -7,6 +7,8 @@ print('2> Heal')
 player_choice = input()
 
 if player_choice == '1':
+    monster['health'] = monster['health'] - player['attack']]
+
     print('Attack')
 elif player_choice == '2':
     print('Heal player')
