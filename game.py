@@ -1,3 +1,4 @@
+import random
 
 game_running = True
 
@@ -10,7 +11,7 @@ while game_running == True:
     print('---' * 17)
     print('Enter your name')
     player['name'] = input()
-    print(" you")
+    print("")
     print('Hello ' + player['name'] + ", let's start game")
 
 
@@ -28,22 +29,26 @@ while game_running == True:
         print('4> For More Information')
 
         player_choice = input()
+        monster_attack = random.randint(10,25)
+        player_heal = random.randint(10,23)
 
         if player_choice == '1':
             monster['health'] = monster['health'] - player['attack']
             if monster['health'] <= 0:
                 player_won = True
             else:
-                player['health'] = player['health'] - monster['attack']
+                player['health'] = player['health'] - monster_attack
                 if player['health'] <= 0:
                     monster_won = True
             
 
         elif player_choice == '2':
-            player['health'] = player['health'] + player['heal']
-            player['health'] = player['health'] - monster['attack']
+            player['health'] = player['health'] + player_heal
+            player['health'] = player['health'] - monster_attack
             if player['health'] <= 0:
                 monster_won = True
+
+
 
         elif player_choice =='3':
              game_running = False
