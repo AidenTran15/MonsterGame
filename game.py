@@ -4,8 +4,8 @@ game_running = True
 
 while game_running == True: 
     new_round = True
-    player = {'name':'Aiden', 'attack': 10, 'heal': 16, 'health': 100}
-    monster = {'name':'Giant', 'attack': 12, 'health': 100}
+    player = {'name':'Aiden', 'health': 100}
+    monster = {'name':'Giant', 'health': 100}
 
     print('            Welcome to Monster Game')
     print('---' * 17)
@@ -31,6 +31,7 @@ while game_running == True:
         player_choice = input()
         monster_attack = random.randint(10,25)
         player_heal = random.randint(10,23)
+        player_attack = random.randint
 
         if player_choice == '1':
             monster['health'] = monster['health'] - player['attack']
