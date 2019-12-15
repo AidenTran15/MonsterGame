@@ -41,7 +41,9 @@ while game_running == True:
 
         elif player_choice == '2':
             player['health'] = player['health'] + player['heal']
-            player['health'] = player['health'] - monster['attack ']
+            player['health'] = player['health'] - monster['attack']
+            if player['health'] <= 0:
+                monster_won = True
 
         elif player_choice =='3':
              game_running = False
