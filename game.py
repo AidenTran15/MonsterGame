@@ -31,7 +31,7 @@ while game_running == True:
         player_choice = input()
         monster_attack = random.randint(10,25)
         player_heal = random.randint(10,23)
-        player_attack = random.randint
+        player_attack = random.randint(10,12)
 
         if player_choice == '1':
             monster['health'] = monster['health'] - player['attack']
