@@ -2,6 +2,7 @@ import random
 
 game_running = True
 
+
 while game_running == True: 
     new_round = True
     player = {'name':'Aiden', 'health': 100}
@@ -13,6 +14,9 @@ while game_running == True:
     player['name'] = input()
     print("")
     print('Hello ' + player['name'] + ", let's start game")
+
+    
+
 
 
     while new_round == True:
@@ -34,9 +38,10 @@ while game_running == True:
         player_attack = random.randint(10,12)
 
         if player_choice == '1':
-            monster['health'] = monster['health'] - player['attack']
+            monster['health'] = monster['health'] - player_attack
             if monster['health'] <= 0:
                 player_won = True
+
             else:
                 player['health'] = player['health'] - monster_attack
                 if player['health'] <= 0:
@@ -73,7 +78,7 @@ while game_running == True:
             print(monster['name'] + ' has ' + str(monster['health']) + ' hp left')
 
         elif player_won:
-            print(player(player['name'] + 'won.'))
+            print(player['name'] + 'won.')
             new_round = False
 
         elif monster_won:
