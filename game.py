@@ -80,10 +80,12 @@ while game_running == True:
         elif player_won:
             print(player['name'] + 'won.')
             new_round = False
+            game_running = False
 
         elif monster_won:
             print('Monster won.')
             new_round = False
+            game_running = False
 
 
 
